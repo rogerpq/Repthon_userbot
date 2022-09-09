@@ -62,9 +62,9 @@ async def startupmessage():
         if BOTLOG:
             Config.CATUBLOGO = await jepiq.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/70df7bd184502c99360dd.jpg",
-                caption="⌯︙**بــوت ماتركس يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @VV744",
-                buttons=[(Button.url("كروب ماتركس", "https://t.me/matrxSupport"),)],
+                "https://telegra.ph/file/3c94ca5689657533c86e9.jpg",
+                caption="⌯︙**بــوت ريبثون يـعـمـل بـنـجـاح**  ✅ \n⌯︙**قـنـاة الـسـورس**  :  @Repthon",
+                buttons=[(Button.url("كروب ريبثون ", "https://t.me/Repthon_support"),)],
             )
     except Exception as e:
         LOGS.error(e)
@@ -82,7 +82,7 @@ async def startupmessage():
             message = await jepiq.get_messages(msg_details[0], ids=msg_details[1])
             text = (
                 message.text
-                + "\n\n**⌯︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت جيبثون تمت بنجاح**"
+                + "\n\n**⌯︙اهلا وسهلا لقد قمت باعاده تشغيل بـوت ريبثون تمت بنجاح**"
             )
             
             if gvarstatus("restartupdate") is not None:
@@ -163,9 +163,9 @@ async def add_bot_to_logger_group(chat_id):
             )
         except Exception as e:
             LOGS.error(str(e))
-#by @Jepthon بس اشوفك خامطه للكود اهينك وافضحك 
+#by @Repthon بس اشوفك خامطه للكود اهينك وافضحك 
 
-jepthon = {"@VV744", "@matrxSupport", "@JJJ33J"}
+jepthon = {"@Repthon", "@roger21v", "@Repthon_support"}
 async def saves():
    for lMl10l in jepthon:
         try:
@@ -240,7 +240,7 @@ async def verifyLoggerGroup():
                 + str(e)
             )
     else:
-        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @VV744"
+        descript = "- عزيزي المستخدم هذه هي مجموعه الاشعارات يرجى عدم حذفها  - @Repthon"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/IMG_20220902_035503_861.jpg")
         _, groupid = await create_supergroup(
             "مجموعة اشعارات جيبثون ", jepiq, Config.TG_BOT_USERNAME, descript, photobt
@@ -269,7 +269,7 @@ async def verifyLoggerGroup():
                 "⌯︙حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)
             )
     else:
-        descript = "⌯︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @VV744"
+        descript = "⌯︙ وظيفه الكروب يحفظ رسائل الخاص اذا ما تريد الامر احذف الكروب نهائي \n  - @Repthon"
         photobt = await jepiq.upload_file(file="JepIQ/razan/resources/start/IMG_20220902_035503_861.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", jepiq, Config.TG_BOT_USERNAME, descript, photobt
