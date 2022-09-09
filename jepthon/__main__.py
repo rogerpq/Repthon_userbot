@@ -49,10 +49,10 @@ async def startup_process():
     await load_plugins("plugins")
     await load_plugins("assistant")
     print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
-    print("⌯︙بـوت ماتـركس يعـمل بـنجاح ")
+    print("⌯︙بـوت ريبثون يعـمل بـنجاح ")
     print(
         f"يجـب تفـعيل وضع الأنلايـن ثم أرسـل {cmdhr}فحص لـرؤيـة اذا كـان البوت شـغال\
-        \nللمسـاعدة تواصـل  https://t.me/ZBBBBB"
+        \nللمسـاعدة تواصـل  https://t.me/Repthon_support"
     )
     print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
     await verifyLoggerGroup()
