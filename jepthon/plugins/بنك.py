@@ -74,7 +74,7 @@ async def start(event):
  ━━━━━━━━━━━━━━━━━
 - لأنشاء حساب اختر احد المصاريف الاتية
 
-- .انشاء حساب ماتركس الاسلامي  
+- .انشاء حساب ريبثون الاسلامي  
 
 - .انشاء حساب الرافدين
  ━━━━━━━━━━━━━━━━━
@@ -319,11 +319,11 @@ async def bankar(message):
     mee = await message.client.get_me()
     if get_bank(mee.id) is not None:
         return await edit_or_reply(message, f"<strong>لديك حساب مصرفي بالفعل</strong>",parse_mode="html")
-    if input == "ماتركس الاسلامي":
-        bankn = "مصرف ماتركس الاسلامي"
+    if input == "ريبثون الاسلامي":
+        bankn = "مصرف ريبثون الاسلامي"
     elif input == "الرافدين":
     	bankn = "مصرف الرافدين"
-    elif input != "الرافدين" or "ماتركس الاسلامي":
+    elif input != "الرافدين" or "ريبثون الاسلامي":
          return await edit_or_reply(message, "لا يوجد هكذا مصرِف !")
     add_bank(mee.id, mee.first_name, 50, bankn)
     cbs = await edit_or_reply(message,f"<strong>تم انشاء حساب مصرفي بالمعلومات التالية:\nاسم صاحب الحساب:{mee.first_name}|\nايدي الحساب:{mee.id}|\nاسم المصرف:{bankn}|\nالاموال المودعة:50$</strong>", parse_mode="html")
