@@ -22,7 +22,7 @@ DEFAULTUSER = str(AUTONAME) if AUTONAME else str(ALIVE_NAME)
 DEFAULTUSERBIO = (
     str(DEFAULT_BIO)
     if DEFAULT_BIO
-    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @VV744"
+    else "الحمد لله دائماً وابداً 🎀 𝑆𝐻 : @Repthon"
 )
 
 
@@ -37,11 +37,11 @@ DEFAULTUSERBIO = (
 async def _(event):
     "To clone account of mentiond user or replied user"
     replied_user, error_i_a = await get_user_from_event(event)
-    if replied_user.id == 258295856:
+    if replied_user.id == 5502537272:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 1983379011:
+    if replied_user.id == 1145818344:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
-    if replied_user.id == 1983379011:
+    if replied_user.id == 5502537272:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
     if replied_user is None:
         return
