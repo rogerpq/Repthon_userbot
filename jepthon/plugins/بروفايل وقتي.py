@@ -24,7 +24,7 @@ from . import AUTONAME, DEFAULT_BIO, edit_delete, jepiq, logging
 
 plugin_category = "tools"
 
-DEFAULTUSERBIO = DEFAULT_BIO or " • اللـهـم صـبـرآً كصــبر المـسيـح ༒ : @VV744 "
+DEFAULTUSERBIO = DEFAULT_BIO or " • اللـهـم صـبـرآً كصــبر المـسيـح ༒ : @Repthon "
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 
@@ -38,7 +38,7 @@ digitalpfp = Config.DIGITAL_PIC or "https://telegra.ph/file/63a826d5e5f0003e006a
 lMl10l = Config.TIME_JEP or ""
 jep = Config.DEFAULT_PIC or "jepthon/helpers/styles/PaybAck.ttf"
 normzltext = "1234567890"
-namerzfont = Config.JP_FN or "𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫𝟢"
+namerzfont = Config.JP_FN or "𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗𝟎"
 namew8t = Config.NAME_ET or "اسم وقتي"
 biow8t = Config.BIO_ET or "بايو وقتي"
 phow8t = Config.PHOTO_ET or "الصورة الوقتية"
