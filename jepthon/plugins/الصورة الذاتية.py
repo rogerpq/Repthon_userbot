@@ -16,9 +16,9 @@ async def dato(event):
         pic,
         caption=f"""
 -تـم جـلب الصـورة بنجـاح ✅
-- CH: @VV744
-- Dev : @Zbbbbb
-- coDer : @s_l_3 .
+- CH: @Repthon
+- Dev : @ZQ_LO
+- coDer : @ul4ul .
   """,
     )
     await event.edit(" 🥺♥ ")
