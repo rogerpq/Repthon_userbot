@@ -37,7 +37,7 @@ async def amireallyalive(event):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "⌔︰‎"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**父[ 𝗠𝗔𝗧𝗥𝗜𝗫 𝗜𝗦 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 ✓ ](t.me/VV744)父**"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**父[ 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 𝗜𝗦 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 ✓ ](t.me/Repthon)父**"
     RR7_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     jepiq_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = jepiq_caption.format(
@@ -74,7 +74,7 @@ async def amireallyalive(event):
 temp = """{ALIVE_TEXT}
 **‎{EMOJI}‌‎𝘯𝘈𝘮𝘦 ⌔ {mention}** ٫
 **‌‎{EMOJI}‌‎𝘱𝘠𝘵𝘏𝘰𝘕 ⌔ {pyver}** ٫
-**‌‎{EMOJI}‌𝘔𝘢𝘵𝘳𝘈𝘟 ⌔ {telever}** ٫
+**‌‎{EMOJI}‌𝑹𝑬𝑷𝑻𝑯𝑶𝑵🜑 ⌔ {telever}** ٫
 **‌‎{EMOJI}‌‎𝘜𝘱𝘵𝘪𝘮𝘦 ⌔ {uptime}** ٫
 ‌‎**{EMOJI}‌‎‌‎𝘱𝘪𝘯𝘎 ⌔ {ping}** ٫
-**⌔ 𝗠𝗔𝗧𝗥𝗜𝗫 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 ⌔**"""
+**⌔ R𝙀𝙋𝙏𝙃𝙊𝙉𖠏 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 ⌔**"""
