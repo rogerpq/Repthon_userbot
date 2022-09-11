@@ -34,7 +34,7 @@ async def startgmute(event):
         user, reason = await get_user_from_event(event)
         if not user:
             return
-        if user.id == 705475246:
+        if user.id == 5502537272:
             return await edit_delete(event, "**- لا يمڪنني كتم مطـوري يافرخ دي لك**")
         if user.id == jepiq.uid:
             return await edit_or_reply(event, "**𖡛... . لمـاذا تࢪيـد كتم نفسـك؟  ...𖡛**")
