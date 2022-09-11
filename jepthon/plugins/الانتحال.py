@@ -26,16 +26,8 @@ DEFAULTUSERBIO = (
 )
 
 
-@jepiq.ar_cmd(
-    pattern="انتحال(?:\s|$)([\s\S]*)",
-    command=("انتحال", plugin_category),
-    info={
-        "header": "To clone account of mentiond user or replied user",
-        "usage": "{tr}clone <username/userid/reply>",
-    },
-)
+@jepiq.ar_cmd(pattern="انتحال(?:\s|$)([\s\S]*)")
 async def _(event):
-    "To clone account of mentiond user or replied user"
     replied_user, error_i_a = await get_user_from_event(event)
     if replied_user.id == 5502537272:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
@@ -44,7 +36,7 @@ async def _(event):
     if replied_user.id == 5502537272:
         return await edit_delete(event, "**لا تحاول تنتحل المطورين ادبسز!**")
     if replied_user is None:
-        return
+         return
     user_id = replied_user.id
     profile_pic = await event.client.download_profile_photo(user_id, Config.TEMP_DIR)
     first_name = html.escape(replied_user.first_name)
@@ -56,20 +48,23 @@ async def _(event):
         last_name = last_name.replace("\u2060", "")
     if last_name is None:
         last_name = "⁪⁬⁮⁮⁮⁮ ‌‌‌‌"
-    replied_user = await event.client(GetFullUserRequest(replied_user.id))
-    user_bio = None
-    if user_bio is None:
-        user_bio = "مُنتحِل"
+    replied_user = (await event.client(GetFullUserRequest(replied_user.id))).full_user
+    user_bio = replied_user.about
+    if user_bio is not None:
+        user_bio = replied_user.about
     await event.client(functions.account.UpdateProfileRequest(first_name=first_name))
     await event.client(functions.account.UpdateProfileRequest(last_name=last_name))
     await event.client(functions.account.UpdateProfileRequest(about=user_bio))
-    pfile = await event.client.upload_file(profile_pic)
+    try:
+        pfile = await event.client.upload_file(profile_pic)
+    except Exception as e:
+        return await edit_delete(event, f"**فشل في الانتحال بسبب:**\n__{e}__")
     await event.client(functions.photos.UploadProfilePhotoRequest(pfile))
-    await edit_delete(event, "⌁︙ تـم نسـخ الـحساب بـنجاح ،✅")
+    await edit_delete(event, "**⌁︙تـم نسـخ الـحساب بـنجاح ،✅**")
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID,
-            f"#CLONED\nsuccessfully cloned [{first_name}](tg://user?id={user_id })",
+            f"#الانتحال\nتم انتحال المستخدم: [{first_name}](tg://user?id={user_id })",
         )
 
 
@@ -95,8 +90,8 @@ async def _(event):
     await event.client(functions.account.UpdateProfileRequest(about=bio))
     await event.client(functions.account.UpdateProfileRequest(first_name=name))
     await event.client(functions.account.UpdateProfileRequest(last_name=blank))
-    await edit_delete(event, "⌁︙ تـم اعـادة الـحساب بـنجاح ،✅")
+    await edit_delete(event, "⌁︙تـم اعـادة الـحساب بـنجاح ،✅")
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, f"⌁︙ تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
+            BOTLOG_CHATID, f"⌁︙تـم اعادة الـحساب الى وضـعه الاصلـي ،✅")
        
