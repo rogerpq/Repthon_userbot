@@ -10,7 +10,7 @@ from .sql_helper.globals import addgvar, delgvar, gvarstatus
 __version__ = "1.0.0"
 __license__ = "كـتابة وتـعديل فريـق ريبثون"
 __author__ = "ريبثون <https://T.ME/Repthon>"
-__copyright__ = "JEPTHON TEAM (C) 2020 - 2021  " + __author__
+__copyright__ = "Repthon TEAM (C) 2020 - 2021  " + __author__
 
 jepiq.version = __version__
 jepiq.tgbot.version = __version__
@@ -22,7 +22,7 @@ JMVERSION = "5.2.0"
 
 
 if Config.UPSTREAM_REPO == "Rep":
-    UPSTREAM_REPO_URL = "https://github.com/rogerpq/Repthon_userboot"
+    UPSTREAM_REPO_URL = "https://github.com/rogerpq/Repthon-"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
