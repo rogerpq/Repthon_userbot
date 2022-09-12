@@ -22,7 +22,7 @@ JMVERSION = "5.2.0"
 
 
 if Config.UPSTREAM_REPO == "Rep":
-    UPSTREAM_REPO_URL = "https://github.com/rogerpq/Repthon-"
+    UPSTREAM_REPO_URL = "https://github.com/rogerpq/Repthon_userboot"
 else:
     UPSTREAM_REPO_URL = Config.UPSTREAM_REPO
 
