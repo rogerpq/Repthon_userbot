@@ -902,5 +902,5 @@ async def approve_p_m(event):
         event,
         APPROVED_PMs,
         file_name="قائـمة الحـماية ريبثون .txt",
-        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس جـيبثون الـعربي \n @Repthon",
+        caption="قائـمة الـمسموح لـهم الـحالية\n سـورس ريبثون الـعربي \n @Repthon",
     )#ترجمه وكتابة فريق جـيبثون
