@@ -157,8 +157,4 @@ async def permalink(mention):
     rzona = random.choice(rr7)
     await edit_or_reply(mention, f"نسبة جماله 👩🏻‍🦳🧑🏻 لـ [{muh}](tg://user?id={user.id}) هـي {rzona}🎈🧸")
 
-@jepiq.on(events.NewMessage(outgoing=False, pattern='منو فخر العرب؟'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownersayed1_id :5502537272
-        order = await event.reply('انته فخر العرب وفخر الامة الاسلامية ❤️')
+
