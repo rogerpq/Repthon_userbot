@@ -20,7 +20,7 @@ plugin_category = "utils"
 
 
 
-#كـتابة المـلف وتعديل.    :   السيد حسين.   اخمط وسمي روحك مطور فرخي 😂
+#كـتابة المـلف وتعديل.    :المطور روجر .   اخمط وسمي روحك مطور فرخي 😂
 # اذا انت ابن حرام اخمط 😂
 # اي بعدك تريد تخمط ترا من تخمط مراح تنجح
 
@@ -105,7 +105,7 @@ async def permalink(mention):
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
     await edit_or_reply(mention, f"**⌯︙المستخدم** [{jepthon}](tg://user?id={user.id}) \n**⌯︙ تـم رفعـه مطي 🐴 بواسطة :** {my_mention} \n**⌯︙ تعال حبي استلم العربانه **")
     
-#كـتابة المـلف وتعديل.    :   السيد حسين.   اخمط وسمي روحك مطور فرخي 😂
+#كـتابة المـلف وتعديل.    :   السيد روجر.   اخمط وسمي روحك مطور فرخي 😂
 # اذا انت ابن حرام اخمط 😂
 # اي بعدك تريد تخمط ترا من تخمط مراح تنجح
 
@@ -243,7 +243,7 @@ async def permalink(mention):
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
     await edit_or_reply(mention, f"** ⣠⡶⠚⠛⠲⢄⡀\n⣼⠁      ⠀⠀⠀⠳⢤⣄\n⢿⠀⢧⡀⠀⠀⠀⠀⠀⢈⡇\n⠈⠳⣼⡙⠒⠶⠶⠖⠚⠉⠳⣄\n⠀⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄\n⠀⠀⠀⠘⣆       ⠀⠀⠀⠀⠀⠈⠓⢦⣀\n⠀⠀⠀⠀⠈⢳⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠲⢤\n⠀⠀⠀⠀⠀⠀⠙⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢧\n⠀⠀⠀⠀⠀⠀⠀    ⠓⠦⠀⠀⠀⠀**\n**🚹 ¦ تعال مصه عزيزي ** [{tag}](tg://user?id={user.id})")
 
-@jepiq.on(admin_cmd(pattern="سيد(?:\s|$)([\s\S]*)"))
+@jepiq.on(admin_cmd(pattern="روجر(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
     await edit_or_reply(mention, f"سماحة روجر مطور سورس ريبثون @Repthon")
 
@@ -305,14 +305,7 @@ async def permalink(mention):
 
 @jepiq.on(admin_cmd(pattern="رفع مميز(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
- 卍Adolf Hitler卍:
-ـۥﹷ۬ﹷۥـ
-
-̶ـ̶ـ̶ـ̶›ـ̶ـــ
-
-𔘓
-
-𓌗   """Generates a link to the user's PM with a custom text."""
+    """Generates a link to the user's PM with a custom text."""
     user, custom = await get_user_from_event(mention)
     if not user:
         return
@@ -322,7 +315,7 @@ async def permalink(mention):
     me = await mention.client.get_me()
     my_first = me.first_name
     my_mention = f"[{me.first_name}](tg://user?id={me.id})"
-    await edit_or_reply(mention, f"**⌯︙الحلو** 「[{jepthon}](tg://user?id={user.id})」 \n**⌯︙ تـم رفعه مميز بواسطة :** {my_mention}"
+    await edit_or_reply(mention, f"**⌯︙الحلو** 「[{jepthon}](tg://user?id={user.id})」 \n**⌯︙ تـم رفعه مميز بواسطة :** {my_mention}")
 
 @jepiq.on(admin_cmd(pattern="رفع ادمن(?:\s|$)([\s\S]*)"))
 async def permalink(mention):
@@ -415,9 +408,3 @@ async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownersayed_id :
         order = await event.reply('يب منصب ✓')
-ownersayed1_id = 5502537272
-@jepiq.on(events.NewMessage(outgoing=False, pattern='منو فخر العرب؟'))
-async def OwnerStart(event):
-    sender = await event.get_sender()
-    if sender.id == ownersayed1_id :
-        order = await event.reply('انته فخر العرب وفخر الامة الاسلامية ❤️')
