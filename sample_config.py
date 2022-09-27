@@ -29,7 +29,7 @@ class Config(object):
     TZ = os.environ.get("TZ", "Asia/Kolkata")
     # set this with required cat repo link
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/rogerpq/Repthon_userbot.git"
+        "UPSTREAM_REPO", "https://github.com/jepthoniq/jepthon.git"
     )
 
     # BASIC and MAIN CONFIG VARS
@@ -67,6 +67,9 @@ class Config(object):
     P_PIC = os.environ.get("P_PIC", None)
     P_TEXT = os.environ.get("P_TEXT", None)
     PMBOT_START_MSSG = os.environ.get("PMBOT_START_MSSG", None)
+    VCMODE = os.environ.get("VCMODE", False)
+    VCMODE = bool(VCMODE and (VCMODE.lower() != "false"))
+    VC_SESSION = os.environ.get("VC_SESSION", None)
 
     BOT_PIC = os.environ.get("BOT_PIC", None)
     # Set this value with group id of private group(can be found this value by .id)
@@ -108,6 +111,7 @@ class Config(object):
     DEFAULT_BIO = os.environ.get("DEFAULT_BIO", None)
     # set this with your deafult name
     DEFAULT_NAME = os.environ.get("DEFAULT_NAME", None)
+    DEFAULT_GROUP = os.environ.get("DEFAULT_GROUP", None)
     # specify command handler that should be used for the plugins
     # this should be a valid "regex" pattern
     COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
