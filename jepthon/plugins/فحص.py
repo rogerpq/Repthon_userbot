@@ -12,7 +12,7 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.events import CallbackQuery
 
-from jepthon import StartTime, jepiq, JMVERSION
+from jepthon import StartTime, jepiq, JEPVERSION
 
 from ..Config import Config
 from ..core.managers import edit_or_reply
@@ -36,7 +36,7 @@ async def amireallyalive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "⌔︰‎"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "⿻┊‌‎"
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "**父[ 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 𝗜𝗦 𝗪𝗢𝗥𝗞𝗜𝗡𝗚 ✓ ](t.me/Repthon)父**"
     RR7_IMG = gvarstatus("ALIVE_PIC") or Config.A_PIC
     jepiq_caption = gvarstatus("ALIVE_TEMPLATE") or temp
@@ -46,7 +46,7 @@ async def amireallyalive(event):
         mention=mention,
         uptime=uptime,
         telever=version.__version__,
-        jmver=JMVERSION,
+        jepver=JEPVERSION,
         pyver=python_version(),
         dbhealth=check_sgnirts,
         ping=ms,
@@ -72,9 +72,9 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
-**‎{EMOJI}‌‎𝘯𝘈𝘮𝘦 ⌔ {mention}** ٫
-**‌‎{EMOJI}‌‎𝘱𝘠𝘵𝘏𝘰𝘕 ⌔ {pyver}** ٫
-**‌‎{EMOJI}‌𝑹𝑬𝑷𝑻𝑯𝑶𝑵🜑 ⌔ {telever}** ٫
-**‌‎{EMOJI}‌‎𝘜𝘱𝘵𝘪𝘮𝘦 ⌔ {uptime}** ٫
-‌‎**{EMOJI}‌‎‌‎𝘱𝘪𝘯𝘎 ⌔ {ping}** ٫
-**⌔ R𝙀𝙋𝙏𝙃𝙊𝙉𖠏 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 ⌔**"""
+**‎{EMOJI}‌‎𝙽𝙰𝙼𝙴 𖠄 {mention}** ٫
+**‌‎{EMOJI}‌‎𝙿𝚈𝚃𝙷𝙾𝙽 𖠄 {pyver}** ٫
+**‌‎{EMOJI}‌‎𝙹𝙴𝙿𝚃𝙷𝙾𝙽 𖠄 {telever}** ٫
+**‌‎{EMOJI}‌‎𝚄𝙿𝚃𝙸𝙼𝙴 𖠄 {uptime}** ٫
+‌‎**{EMOJI}‌‎‌‎𝙿𝙸𝙽𝙶 𖠄 {ping}** ٫
+**𖠄 𝐑𝐄𝐏𝐓𝐇𝐎𝐍 𝗨𝘀𝗲𝗿𝗯𝗼𝘁 𖠄**"""
